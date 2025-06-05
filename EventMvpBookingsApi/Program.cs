@@ -1,7 +1,8 @@
 using EventMvpBookingsApi.Repositories;
 
-
 var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.UseUrls("http://localhost:5203");
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -34,4 +35,3 @@ app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
-//temp
